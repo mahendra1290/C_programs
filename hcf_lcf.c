@@ -2,7 +2,6 @@
 #include<stdio.h>
 
 void main(){
-	int count = 0;
 	int len;               //to store number of elements
 	int brk;               //to find lcm
 	int looper = 1;        //number of elements
@@ -16,7 +15,6 @@ void main(){
 		scanf("%d", &lcm_ar[i]);
 	}
 	while(looper){
-		count ++;
 		for(int i=0; i<len; i++){
 			//checks if all number are divided completely
 			if(lcm_ar[i] != 1)
@@ -42,6 +40,5 @@ void main(){
 		    lcm = lcm * lcm_temp;     		
 }
 	printf("L.C.M is %d\n", lcm);
-	printf("count = %d",count);
 }
 
