@@ -2,17 +2,21 @@
 #include<stdio.h>
 
 void main(){
-	int len;               //to store number of elements
+	int len; 
+	int temp;
+	int prod = 1;              //to store number of elements
 	int brk;               //to find lcm
 	int looper = 1;        //number of elements
-	int lcm = 1;           //to store lcm
-	int lcm_temp = 2;      //to find lcm
+	long int lcm = 1;
+	long int hcf = 1;            //to store lcm
+	int lcm_temp = 2; 
 	printf("how many numbers are there\n");
 	scanf("%d", &len);
 	int lcm_ar[len];
 	printf("Enter the numbers\n");
 	for(int i=0; i<len; i++){
 		scanf("%d", &lcm_ar[i]);
+		prod = prod * lcm_ar[i];
 	}
 	while(looper){
 		for(int i=0; i<len; i++){
@@ -40,5 +44,7 @@ void main(){
 		    lcm = lcm * lcm_temp;     		
 }
 	printf("L.C.M is %d\n", lcm);
+   	hcf = prod/lcm;
+	printf("H.C.F is %d\n", hcf);
 }
 
